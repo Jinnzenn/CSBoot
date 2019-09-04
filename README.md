@@ -108,7 +108,7 @@ Keep reading, keep learning.
 
 ##### 面向对象程序设计 | 函数式程序设计 | 逻辑式程序设计 | 事件驱动和反应式程序设计 
 
-##### C++
+##### C++开发
 
 ###### 《C++ Primer Plus》 | 作者：Stephen Prata | 状态：完成 / 20190329
 
@@ -128,7 +128,7 @@ Keep reading, keep learning.
 
 ###### 《STL源码解析》| 待读
 
-##### Java
+##### Java开发
 
 ###### 《Java核心技术  卷Ⅰ 基础知识》 |  作者：Cay S. Horstmann | 状态： 完成（前7章）/20190807
 
@@ -138,15 +138,21 @@ Keep reading, keep learning.
 
 练习使用Java语言的一些特性，比如Lambda表达式，熟悉基本语法、
 
+###### 《深入理解Java虚拟机——JVM高级特性与最佳实践》 | 作者：周志明 | 状态：在读 2/3
+
 
 
 ###### 《Thinking in Java》/《Java编程思想》、《Effective Java》
 
 听说是必看书，还没准备好。
 
-###### 《深入理解Java虚拟机——JVM高级特性与最佳实践》
+###### 
 
-###### 《Head First 设计模式》 |  作者：Eric Freeman等 | 状态：在读
+
+
+##### 设计模式
+
+###### 《Head First 设计模式》 |  作者：Eric Freeman等 | 状态：在读 1/3
 
 入门设计模式用书。学Java时都推荐学完设计模式再学习大量的类。
 
@@ -280,7 +286,7 @@ Keep reading, keep learning.
 
 ###### 《TCP/IP (卷一)》
 
-##### 《计算机网络：自顶向下方法》 | 作者：James F. Kurose 等 | 状态：在读 
+###### 《计算机网络：自顶向下方法》 | 作者：James F. Kurose 等 | 状态：在读 
 
 ##### 移动性
 
