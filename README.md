@@ -323,6 +323,8 @@ Keep reading, keep learning.
 
 ###### 《MySQL技术内幕》 
 
+sql编程题练习：https://sqlzoo.net/wiki/SQL_Tutorial
+
 ##### 分布式数据库
 
 ##### 物理数据库设计

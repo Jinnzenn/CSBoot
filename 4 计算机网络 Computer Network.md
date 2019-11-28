@@ -289,7 +289,6 @@ application-layer message----transport-layer segment----network-layer datagram--
 流行的有Apache，存储Web页面
 
 		- HTTP, Hypertext transfer protocol
-（具体请看HTTP协议部分）
 
 			- HTTP协议决定了客户端如何向服务器端发送请求报文和接收响应报文，决定了服务器端如何接收请求报文和发送响应报文
 
@@ -299,13 +298,17 @@ application-layer message----transport-layer segment----network-layer datagram--
 			- 连接方式
 
 				- 持续连接
+
+					- 流水线方式
+					- 非流水线方式
+
 				- 非持续连接，每次对象传输都要重新建立TCP连接
 
 			- HTTP报文格式
 
 				- HTTP 请求报文格式
 
-					- 请求行
+					- 第一部分：请求行
 
 						- 请求方法
 
@@ -324,7 +327,7 @@ application-layer message----transport-layer segment----network-layer datagram--
 							- HTTP/1.0
 							- Others
 
-					- 首部行/请求头信息
+					- 第二部分：首部行/请求头信息
 
 						- 每一行 = 首部字段名 + 值组成
 						- 典型的字段
@@ -336,22 +339,28 @@ application-layer message----transport-layer segment----network-layer datagram--
 							- Referer (HTTP访问的来源)
 							- Others
 
-					- 请求主体信息 (POST必须，用来提交表单等)
+					- 第三部分：请求主体信息 (POST必须，用来提交表单等)
 
 						- 主体信息格式
 
 							- JSON
 							- XML
 
-				- 具体的 HTTP请求报文
+				- 具体的 HTTP请求报文举例
 
-					- GET请求
-					- POST请求
-					- PUT请求
+					- GET / HTTP/1.1
+Host: localhost
+csrftoken: Zr6Sy6DpRMjMYjDGjHavuS9lwc5JLCt2MxMiogaNhd7pueKHwR4tbOcvJa5smoaz
+					- POST / HTTP/1.1
+Host: localhost
+csrftoken: Zr6Sy6DpRMjMYjDGjHavuS9lwc5JLCt2MxMiogaNhd7pueKHwR4tbOcvJa5smoaz
+Content-Length: 20 
+Content-Type: application/x-www-form-urlencoded
+					- PUT
 
 				- HTTP 响应报文格式
 
-					- 响应行/初始状态行
+					- 第一部分：响应行/初始状态行
 
 						- 协议版本
 						- 状态码
@@ -362,7 +371,7 @@ application-layer message----transport-layer segment----network-layer datagram--
 
 								- 301： 请求被永久重定向到另一个地址，永久性转移(Permanently Moved)
 								- 302： 请求被临时重定向到另一个地址，暂时性转移(Temporarily Moved )
-								- 304：Not Modified （资源未修改，从本地取缓存）
+								- 304：Not Modified （资源未修改，从本地（代理服务器）取缓存）
 								- 307： 重定向中保持原有的 post 数据，防止数据丢失
 
 							- 4XX：客户端请求错误，服务端不能理解
@@ -378,24 +387,45 @@ application-layer message----transport-layer segment----network-layer datagram--
 
 							- 对于状态码的文字解释
 
-					- 首部行/响应头信息
-					- 响应主体信息（响应报文的主题部分）
+					- 第二部分：首部行/响应头信息
+					- 第三部分：响应主体信息（响应报文的主题部分）
 
 						- 主体信息格式
 
 							- 文本
 							- 二进制文件
 
-				- 具体的响应报文
+				- 具体的响应报文举例
 
-			- Cookie机制
+		- 结合HTTP和应用程序建立的网络基础设施
+
+			- Cookie机制，浏览器本地缓存
 
 				- HTTP报文中 cookie首部行 + 用户本地cookie文件 + 服务器后端数据库
 				- 状态信息的存储和隐私侵犯
 
 			- Web缓存器，Web Cache/代理服务器Proxy Server
 
-				- ⏲
+				- 缓存的功能分类
+
+					- 私有缓存和公有缓存
+					- 代理缓存和代理缓存的层次结构
+
+						- 网状缓存和内容路由
+
+					- 对等缓存关系
+
+				- 缓存了客户端最近请求的对象。既是客户端也是服务器。
+
+					- 缓存命中率
+					- 优点：缩短响应时间，节省带宽。
+
+				- 内容分发网络 Context Distribution Network
+				- HTTP-条件GET方法
+
+					- 首部行: If Modified Since
+
+			- 服务器后端数据库
 
 	- 文件传输与FTP
 	- 电子邮件与SMTP
@@ -406,10 +436,19 @@ application-layer message----transport-layer segment----network-layer datagram--
 
 ### 运输层
 
-- 协议
+- 两个端系统之间的交付服务，两个端系统进程之间的交付服务
+- 运输层协议原理
 
-	- 构成和原理
-	- 工作方式
+	- 功能
+
+		- 可靠传输
+		- 拥塞控制
+
+	- TCP
+
+		- TCP连接的建立
+
+	- DCP
 
 ### 网络层
 
