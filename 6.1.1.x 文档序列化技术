@@ -1,0 +1,21 @@
+JSON格式
+Elasticsearch 使用 JavaScript Object Notation（或者 JSON）作为文档的序列化格式。JSON 序列化为大多数编程语言所支持，并且已经成为 NoSQL 领域的标准格式。 它简单、简洁、易于阅读
+
+XML格式
+
+
+
+
+### JSON 与 XML 相同之处
+JSON 是纯文本
+JSON 具有"自我描述性"（人类可读）
+JSON 具有层级结构（值中存在值）
+JSON 可通过 JavaScript 进行解析
+JSON 数据可使用 AJAX 进行传输
+### JSON 与 XML 不同之处
+没有结束标签
+更短
+读写的速度更快
+能够使用内建的 JavaScript eval() 方法进行解析
+使用数组
+不使用保留字
