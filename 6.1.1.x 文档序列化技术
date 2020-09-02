@@ -1,3 +1,4 @@
+常见的结构化文档格式 JSON HTML XML YAML
 JSON格式
 Elasticsearch 使用 JavaScript Object Notation（或者 JSON）作为文档的序列化格式。JSON 序列化为大多数编程语言所支持，并且已经成为 NoSQL 领域的标准格式。 它简单、简洁、易于阅读
 
